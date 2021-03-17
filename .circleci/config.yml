@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:  # required for runs that don't use workflows
-    working_directory: ~/circleci-demo-python-django
+    working_directory: ~/fast-api-example
     docker:
       - image: circleci/python:3.6.4  # primary container for the build job
         auth:
@@ -14,5 +14,5 @@ jobs:
       - run:| sudo pip install virtualenv 
               virtualenv -p python3 venv
               source venv/bin/activate
-              pip install -r requirements.txt
+              pip install -r ~/fast-api-example/requirements.txt
     
