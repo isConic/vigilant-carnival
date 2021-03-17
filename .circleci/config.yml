@@ -11,8 +11,9 @@ jobs:
             PIPENV_VENV_IN_PROJECT: true
     steps:
       - checkout
-      - run:| sudo pip install virtualenv 
-              virtualenv -p python3 venv
-              source venv/bin/activate
-              pip install -r ~/fast-api-example/requirements.txt
+      - run:
+          command:| sudo pip install virtualenv 
+                    virtualenv -p python3 venv
+                    source venv/bin/activate
+                    pip install -r ~/fast-api-example/requirements.txt
     
