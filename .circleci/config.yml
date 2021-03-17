@@ -11,8 +11,8 @@ jobs:
             PIPENV_VENV_IN_PROJECT: true
     steps:
       - checkout
-      - run: sudo pip install virtualenv
-      - run: virtualenv -p python3 venv
-      - run: source venv/bin/activate
-      - run: pip install -r requirements.txt
+      - run:| sudo pip install virtualenv 
+              virtualenv -p python3 venv
+              source venv/bin/activate
+              pip install -r requirements.txt
     
